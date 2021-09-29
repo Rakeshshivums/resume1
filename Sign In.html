@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="sign in.css">
+</head>
+<body>
+
+
+
+<form>
+    <div class="sign-In-form">
+      <div class="form">
+          <form class="sign-in">
+              <h3>Login</h3>
+              <input type="text" placeholder="user name"/>
+              <input type="password" placeholder="password"/>
+              <button>Login</button>
+              <p class="message">New User? <a href="Register.html"> Register</a></p>
+              </p>
+          </form>
+      </div>
+  </div>
+</form>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+  </script>
+<script>
+  $('.message a') .click (function(){
+    $('form').animate({
+      height:"toggle", opacity:"toggle"},"slow");
+  });
+</script>
+</body>
+</html>

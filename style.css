@@ -1,0 +1,20 @@
+body{
+    background-image: url("bluesh.jpg");
+    background-repeat: no-repeat;
+    background-size: 150% 100%;
+}
+
+/*#cv-form{
+ display: none;}*/
+
+#cv-template{
+    display: none;
+}
+.myimg{
+    /*border: 1px solid red;*/
+    border-radius: 50%;
+    width: 150px;
+}
+.background{
+    background-color: aqua;
+}

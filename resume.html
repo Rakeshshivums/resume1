@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Resume Builder</title>
+    </head>
+    <body>
+        <div class="container" id="cv-form">
+        <h1 class="text-center my-4">Resume Builder</h1>
+        <div class="row">
+            <div class="col-md-6">
+            
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+                
+                <div class="form-group mt-2">
+                    <label for="contactField">Contact Number</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Select your profile picture</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+                <h3>Personal Details</h3>
+                <div class="form-group">
+                    <label for="fnameField">Father's Name</label>
+                    <input type="text" id="fnameField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="birthField">Date-of-Birth</label>
+                    <input type="text" id="birthField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="rField">Religion</label>
+                    <input type="text" id="rField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="lField">Languages Known</label>
+                    <textarea id="lField" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="nField">Nationality</label>
+                    <input type="text" id="nField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="ihField">Interests and Hobbies</label>
+                    <textarea id="ihField" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+
+            </div>
+
+            
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+
+                <div class="form-group">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" placeholder="Enter here" class="form-control" ></textarea>
+                </div>
+
+                <div class="form-group" id="eq">
+                    <label for="">Education</label>
+                    <textarea placeholder="Enter here" class="form-control eqField"></textarea>
+
+                    <div class="container text-center mt-2" id="eqAddButton">
+                        <button onclick="addNewEQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group" id="we">
+                    <label for="">Technical Skills</label>
+                    <textarea placeholder="Enter here" class="form-control weField"></textarea>
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group" id="ac">
+                    <label for="">Achievements</label>
+                    <textarea placeholder="Enter here" class="form-control acField"></textarea>
+
+                    <div class="container text-center mt-2" id="acAddButton">
+                        <button onclick="addNewACField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Declaration</label>
+                    <textarea id="declarationField" placeholder="Enter here" class="form-control" ></textarea>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate Resume</button>
+        </div>
+    </div>
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+            <!-- first col -->
+            <img src="profile.jpg" alt="" class="img-fluid myimg" id="imgTemplate"/>
+            <div class="container">
+                <p id="nameT1">Aman Kumar Tiwari</p>
+                <p id="contactT">+919019179443</p>
+                <p id="addressT">566563/458712 sector 34 Bandra , India</p>
+
+                <hr />
+            
+                <p id="fnameT">Jagajeeth Kumar Tiwari</p>
+                <p id="dateT">08 September, 1997</p>
+                <p id="reT">Hindu</p>
+                <p id="lanT">English,Hindi,Marathi</p>
+                <p id="nationalityT">Indian</p>
+                <p id="hobbiesT">Dancing, Singing etc..</p>
+            </div>
+
+        </div>
+            <div class="col-md-8 py-5">
+
+                <h1 id="nameT2"class="text-center" style="font-weight: 988;">Aman Kumar Tiwari</h1>
+
+                <!--objective card-->
+                <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est excepturi quas odio provident eum perspiciatis cumque modi minus aliquam cum ratione veniam molestias laboriosam rerum asperiores, amet architecto saepe. Explicabo repellat quaerat aperiam impedit quae natus cumque amet, autem voluptates aut, facilis, incidunt deleniti ut. Doloribus expedita ducimus qui at!</p>
+                 </div>
+                </div>
+
+
+                <!--Edcation Qualification-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eqT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                        
+                        
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                        
+                        
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                        </ul>
+                     </div>
+                    </div>
+
+                    <!--Tecnical Skills-->
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Technical Skills</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="tsT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                            
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                            
+                            
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                            </ul>
+                         </div>
+                        </div>
+
+                        <!--Achievements-->
+                        <div class="card mt-4">
+                            <div class="card-header background">
+                                <h3>Achievements</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul id="acT">
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                                
+                                
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                                
+                                
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, cumque!</li>
+                                </ul>
+                             </div>
+                            </div>
+
+                            <!--Declaration-->
+                            <div class="card mt-4">
+                                <div class="card-header background">
+                                    <h3>Declaration</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p id="decT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est excepturi quas odio provident eum perspiciatis cumque modi minus aliquam cum ratione veniam molestias laboriosam rerum asperiores, amet architecto saepe. Explicabo repellat quaerat aperiam impedit quae natus cumque amet, autem voluptates aut, facilis, incidunt deleniti ut. Doloribus expedita ducimus qui at!</p>
+                                 </div>
+                                </div>
+
+                                <div class="container mt-3 text-center">
+                                    <button onclick="printCV()" class="btn background">Print Resume</button>
+                                </div>
+
+             </div>
+
+        </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
